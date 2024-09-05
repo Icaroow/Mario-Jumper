@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*imagens config*/
+
+.game-board  {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #333;
+    border-bottom: 15px solid green;
+    background: linear-gradient(#01ccff, #768f96);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+/*animação do cano indo e voltando kjjkkkk*/
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+   
+   animation: pipe-animation 1.5s infinite linear;
+}
+
+.marioo{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump{
+    animation:jump 500ms ease-out;
+}
+
+
+.clouds{
+
+position: absolute;
+width: 500px;
+animation: clouds-animation 15s infinite linear;
+}
+/*Animação do cano indo e voltando*/
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/* pulo animation*/
+
+@keyframes jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
